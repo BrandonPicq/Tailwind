@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link href="./src/output.css" rel="stylesheet" />
     <title>Klivio, l'allié de vos formations</title>
   </head>
-  <body>
+  <body class="font-montserrat">
     <div style="display: none">
       <svg xmlns="http://www.w3.org/2000/svg">
         <symbol id="star-full" viewBox="0 0 21 20">
@@ -128,7 +129,7 @@
         <symbol id="search" viewBox="0 0 23 24" fill="none">
           <path
             d="M15.5571 17.04L18.7492 20.4M17.7198 11.44C17.7198 15.7699 14.4938 19.28 10.5143 19.28C6.53475 19.28 3.30872 15.7699 3.30872 11.44C3.30872 7.11009 6.53475 3.6 10.5143 3.6C14.4938 3.6 17.7198 7.11009 17.7198 11.44Z"
-            stroke="white"
+            stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
           />
@@ -228,24 +229,41 @@
         </symbol>
       </svg>
     </div>
-    <nav>
-      <div>
+    <nav
+      class="bg-klivio-dark text-white shadow-md sticky top-0 left-0 right-0 z-10 px-4 py-2 flex items-center justify-between"
+    >
+      <div class="flex-shrink-0 w-32">
         <img src="assets/logo.png" alt="Klivio Logo" />
       </div>
-      <div>
-        <a href="#">Les formations</a>
-        <form>
-          <input type="search" placeholder="Rechercher" />
-          <button type="submit">
-            <svg width="23" height="24"><use href="#search"></use></svg>
+      <div class="hidden md:flex items-center gap-70 space-x-4">
+        <a href="#" class="flex-1">Les formations</a>
+        <form class="relative">
+          <input
+            type="text"
+            placeholder="Rechercher"
+            class="border rounded px-2 py-1 pr-10 w-64 bg-white text-gray-900"
+          />
+          <button
+            type="submit"
+            class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-700"
+          >
+            <svg width="20" height="20"><use href="#search"></use></svg>
           </button>
         </form>
       </div>
-      <div>
-        <button>Connexion</button>
-        <button>Inscription</button>
+      <div class="hidden md:flex items-center space-x-2">
+        <button
+          class="bg-klivio-green text-white px-4 py-2 rounded hover:bg-opacity-80"
+        >
+          Connexion
+        </button>
+        <button
+          class="bg-green-800 text-white px-4 py-2 rounded hover:bg-opacity-80"
+        >
+          Inscription
+        </button>
       </div>
-      <button aria-label="Ouvrir le menu" type="button">
+      <button aria-label="Ouvrir le menu" type="button" class="md:hidden">
         <svg width="56" height="56"><use href="#navbar-toggle"></use></svg>
       </button>
     </nav>

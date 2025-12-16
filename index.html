@@ -241,7 +241,7 @@
           <input
             type="text"
             placeholder="Rechercher"
-            class="border rounded px-2 py-1 pr-10 w-64 bg-white text-gray-900"
+            class="border rounded px-2 py-1 pr-10 w-96 bg-white text-gray-900"
           />
           <button
             type="submit"
@@ -253,12 +253,12 @@
       </div>
       <div class="hidden md:flex items-center space-x-2">
         <button
-          class="bg-klivio-green text-white px-4 py-2 rounded hover:bg-opacity-80"
+          class="bg-klivio-green text-white px-4 py-2 rounded hover:opacity-90 transition duration-200"
         >
           Connexion
         </button>
         <button
-          class="bg-green-800 text-white px-4 py-2 rounded hover:bg-opacity-80"
+          class="bg-green-800 text-white px-4 py-2 rounded hover:opacity-90 transition duration-200"
         >
           Inscription
         </button>
@@ -268,182 +268,294 @@
       </button>
     </nav>
 
-    <header>
-      <div>
-        <h1>KLIVIO, L'ALLIé DE VOTRE PROGRESSION</h1>
-        <p>LES MEILLEURES FORMATIONS SUR LE DEVELOPPEMENT PERSONNEL</p>
-        <button>En savoir plus</button>
+    <header
+      class="bg-cover bg-center bg-no-repeat min-h-[50vh] flex items-center justify-center pt-20 relative"
+      style="background-image: url('assets/bg-header.png')"
+    >
+      <div class="absolute inset-0 bg-black opacity-40"></div>
+      <div
+        class="text-center text-white max-w-2xl uppercase px-4 relative z-10"
+      >
+        <h1
+          class="text-5xl font-bold mb-4"
+          style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8)"
+        >
+          KLIVIO, L'ALLIé DE VOTRE PROGRESSION
+        </h1>
+        <p
+          class="text-lg mb-8 text-gray-100"
+          style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7)"
+        >
+          LES MEILLEURES FORMATIONS SUR LE DEVELOPPEMENT PERSONNEL
+        </p>
+        <button
+          class="bg-klivio-green text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition duration-200"
+        >
+          En savoir plus
+        </button>
       </div>
     </header>
-    <section>
-      <h2>Les formations populaires</h2>
+    <section class="py-12 px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center">
+        Les formations populaires
+      </h2>
 
-      <div>
-        <img src="assets/img-course.png" alt="Parler en public" />
-        <p>
-          <strong>15,99€</strong>
-          <span>60€</span>
-        </p>
-        <div>
-          <h3>Parler en public</h3>
-          <p>Sonia Lefèvre | Coach prise de parole</p>
-          <div>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="border border-gray-200 rounded-lg shadow-md overflow-hidden bg-white"
+        >
+          <img
+            src="assets/img-course.png"
+            alt="Parler en public"
+            class="w-full h-48 object-cover"
+          />
+          <p class="flex items-center justify-between px-4 py-2 bg-gray-50">
+            <strong class="text-lg font-bold text-klivio-green">15,99€</strong>
+            <span class="text-sm text-gray-400 line-through">60€</span>
+          </p>
+          <div class="p-4">
+            <h3 class="text-lg font-bold mb-2">Parler en public</h3>
+            <p class="text-sm text-gray-600 mb-3">
+              Sonia Lefèvre | Coach prise de parole
+            </p>
+            <div class="flex gap-1 mb-3">
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+            </div>
+            <p class="text-sm text-gray-700">
+              Gagnez en aisance et captez votre auditoire
+            </p>
           </div>
-          <p>Gagnez en aisance et captez votre auditoire</p>
+        </div>
+
+        <div
+          class="border border-gray-200 rounded-lg shadow-md overflow-hidden bg-white"
+        >
+          <img
+            src="assets/img-course.png"
+            alt="Gérer le stress"
+            class="w-full h-48 object-cover"
+          />
+          <p class="flex items-center justify-between px-4 py-2 bg-gray-50">
+            <strong class="text-lg font-bold text-klivio-green">15,99€</strong>
+            <span class="text-sm text-gray-400 line-through">60€</span>
+          </p>
+          <div class="p-4">
+            <h3 class="text-lg font-bold mb-2">Gérer le stress</h3>
+            <p class="text-sm text-gray-600 mb-3">Lucie Garnier | Formatrice</p>
+            <div class="flex gap-1 mb-3">
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-empty"></use></svg>
+            </div>
+            <p class="text-sm text-gray-700">
+              Apprenez à rester serein face aux défis
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border border-gray-200 rounded-lg shadow-md overflow-hidden bg-white"
+        >
+          <img
+            src="assets/img-course.png"
+            alt="Travailler en équipe"
+            class="w-full h-48 object-cover"
+          />
+          <p class="flex items-center justify-between px-4 py-2 bg-gray-50">
+            <strong class="text-lg font-bold text-klivio-green">15,99€</strong>
+            <span class="text-sm text-gray-400 line-through">60€</span>
+          </p>
+          <div class="p-4">
+            <h3 class="text-lg font-bold mb-2">Travailler en équipe</h3>
+            <p class="text-sm text-gray-600 mb-3">David Moreau | Expert</p>
+            <div class="flex gap-1 mb-3">
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+            </div>
+            <p class="text-sm text-gray-700">
+              Collaborez efficacement, même à distance
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border border-gray-200 rounded-lg shadow-md overflow-hidden bg-white"
+        >
+          <img
+            src="assets/img-course.png"
+            alt="Gérer son temps"
+            class="w-full h-48 object-cover"
+          />
+          <p class="flex items-center justify-between px-4 py-2 bg-gray-50">
+            <strong class="text-lg font-bold text-klivio-green">15,99€</strong>
+            <span class="text-sm text-gray-400 line-through">60€</span>
+          </p>
+          <div class="p-4">
+            <h3 class="text-lg font-bold mb-2">Gérer son temps</h3>
+            <p class="text-sm text-gray-600 mb-3">
+              Claire Dumas | Coach organisation
+            </p>
+            <div class="flex gap-1 mb-3">
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-empty"></use></svg>
+            </div>
+            <p class="text-sm text-gray-700">
+              Optimisez vos journées et gagnez en efficacité
+            </p>
+          </div>
         </div>
       </div>
-
-      <div>
-        <img src="assets/img-course.png" alt="Gérer le stress" />
-        <p>
-          <strong>15,99€</strong>
-          <span>60€</span>
-        </p>
-        <div>
-          <h3>Gérer le stress</h3>
-          <p>Lucie Garnier | Formatrice</p>
-          <div>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-empty"></use></svg>
-          </div>
-          <p>Apprenez à rester serein face aux défis</p>
-        </div>
+      <div class="text-center mt-8">
+        <button
+          class="bg-klivio-green text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition duration-200"
+        >
+          Voir plus de formations
+        </button>
       </div>
-
-      <div>
-        <img src="assets/img-course.png" alt="Travailler en équipe" />
-        <p>
-          <strong>15,99€</strong>
-          <span>60€</span>
-        </p>
-        <div>
-          <h3>Travailler en équipe</h3>
-          <p>David Moreau | Expert</p>
-          <div>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-          </div>
-          <p>Collaborez efficacement, même à distance</p>
-        </div>
-      </div>
-
-      <div>
-        <img src="assets/img-course.png" alt="Gérer son temps" />
-        <p>
-          <strong>15,99€</strong>
-          <span>60€</span>
-        </p>
-        <div>
-          <h3>Gérer son temps</h3>
-          <p>Claire Dumas | Coach organisation</p>
-          <div>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-empty"></use></svg>
-          </div>
-          <p>Optimisez vos journées et gagnez en efficacité</p>
-        </div>
-      </div>
-      <button>Voir plus de formations</button>
     </section>
 
-    <section>
-      <h2>Les formations récentes</h2>
+    <section class="py-12 px-4 bg-gray-900">
+      <h2 class="text-3xl font-bold mb-8 text-white text-center">
+        Les formations récentes
+      </h2>
 
-      <div>
-        <img src="assets/img-course.png" alt="Mieux communiquer" />
-        <p>
-          <strong>15,99€</strong>
-          <span>60€</span>
-        </p>
-        <div>
-          <h3>Mieux communiquer</h3>
-          <p>Julien Martel | Coach en comm.</p>
-          <div>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="border border-gray-700 rounded-lg shadow-md overflow-hidden bg-klivio-dark text-white"
+        >
+          <img
+            src="assets/img-course.png"
+            alt="Mieux communiquer"
+            class="w-full h-48 object-cover"
+          />
+          <p class="flex items-center justify-between px-4 py-2 bg-gray-800">
+            <strong class="text-lg font-bold text-klivio-green">15,99€</strong>
+            <span class="text-sm text-gray-300 line-through">60€</span>
+          </p>
+          <div class="p-4">
+            <h3 class="text-lg font-bold mb-2">Mieux communiquer</h3>
+            <p class="text-sm text-gray-300 mb-3">
+              Julien Martel | Coach en comm.
+            </p>
+            <div class="flex gap-1 mb-3">
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+            </div>
+            <p class="text-sm text-gray-200">
+              Améliorez vos échanges et votre impact relationnel
+            </p>
           </div>
-          <p>Améliorez vos échanges et votre impact relationnel</p>
+        </div>
+
+        <div
+          class="border border-gray-700 rounded-lg shadow-md overflow-hidden bg-klivio-dark text-white"
+        >
+          <img
+            src="assets/img-course.png"
+            alt="Maîtriser ses émotions"
+            class="w-full h-48 object-cover"
+          />
+          <p class="flex items-center justify-between px-4 py-2 bg-gray-800">
+            <strong class="text-lg font-bold text-klivio-green">15,99€</strong>
+            <span class="text-sm text-gray-300 line-through">60€</span>
+          </p>
+          <div class="p-4">
+            <h3 class="text-lg font-bold mb-2">Maîtriser ses émotions</h3>
+            <p class="text-sm text-gray-300 mb-3">
+              Amel Benali | Psy. du travail
+            </p>
+            <div class="flex gap-1 mb-3">
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+            </div>
+            <p class="text-sm text-gray-200">
+              Développez calme et intelligence émotionnelle
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border border-gray-700 rounded-lg shadow-md overflow-hidden bg-klivio-dark text-white"
+        >
+          <img
+            src="assets/img-course.png"
+            alt="Résoudre les problèmes"
+            class="w-full h-48 object-cover"
+          />
+          <p class="flex items-center justify-between px-4 py-2 bg-gray-800">
+            <strong class="text-lg font-bold text-klivio-green">15,99€</strong>
+            <span class="text-sm text-gray-300 line-through">60€</span>
+          </p>
+          <div class="p-4">
+            <h3 class="text-lg font-bold mb-2">Résoudre les problèmes</h3>
+            <p class="text-sm text-gray-300 mb-3">Thomas Rivière | Expert</p>
+            <div class="flex gap-1 mb-3">
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-empty"></use></svg>
+            </div>
+            <p class="text-sm text-gray-200">
+              Gagnez en aisance et captez votre auditoire
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="border border-gray-700 rounded-lg shadow-md overflow-hidden bg-klivio-dark text-white"
+        >
+          <img
+            src="assets/img-course.png"
+            alt="Parler en public"
+            class="w-full h-48 object-cover"
+          />
+          <p class="flex items-center justify-between px-4 py-2 bg-gray-800">
+            <strong class="text-lg font-bold text-klivio-green">15,99€</strong>
+            <span class="text-sm text-gray-300 line-through">60€</span>
+          </p>
+          <div class="p-4">
+            <h3 class="text-lg font-bold mb-2">Leadership positif</h3>
+            <p class="text-sm text-gray-300 mb-3">Marc Mguyen | Consultant</p>
+            <div class="flex gap-1 mb-3">
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-full"></use></svg>
+              <svg width="21" height="20"><use href="#star-empty"></use></svg>
+            </div>
+            <p class="text-sm text-gray-200">
+              Inspirez, motivez et fédérez votre équipe
+            </p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <img src="assets/img-course.png" alt="Maîtriser ses émotions" />
-        <p>
-          <strong>15,99€</strong>
-          <span>60€</span>
-        </p>
-        <div>
-          <h3>Maîtriser ses émotions</h3>
-          <p>Amel Benali | Psy. du travail</p>
-          <div>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-          </div>
-          <p>Développez calme et intelligence émotionnelle</p>
-        </div>
+      <div class="text-center mt-8">
+        <button
+          class="bg-white text-klivio-dark px-8 py-3 rounded-lg font-bold hover:opacity-90 transition duration-200"
+        >
+          Voir plus de formations
+        </button>
       </div>
-
-      <div>
-        <img src="assets/img-course.png" alt="Résoudre les problèmes" />
-        <p>
-          <strong>15,99€</strong>
-          <span>60€</span>
-        </p>
-        <div>
-          <h3>Résoudre les problèmes</h3>
-          <p>Thomas Rivière | Expert</p>
-          <div>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-empty"></use></svg>
-          </div>
-          <p>Gagnez en aisance et captez votre auditoire</p>
-        </div>
-      </div>
-
-      <div>
-        <img src="assets/img-course.png" alt="Parler en public" />
-        <p>
-          <strong>15,99€</strong>
-          <span>60€</span>
-        </p>
-        <div>
-          <h3>Leadership positif</h3>
-          <p>Marc Mguyen | Consultant</p>
-          <div>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-full"></use></svg>
-            <svg width="21" height="20"><use href="#star-empty"></use></svg>
-          </div>
-          <p>Inspirez, motivez et fédérez votre équipe</p>
-        </div>
-      </div>
-
-      <button>Voir plus de formations</button>
     </section>
     <section>
       <h2>Avis clients</h2>
